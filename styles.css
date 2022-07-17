@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Plus Jakarta Sans';
+}
+
+.get_started{
+    height: 56px;
+    background: #13183F;
+    border-radius: 28px;
+    color: #FFFFFF;
+
+}
+.get_started_2{
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    border-radius: 31.5px;
+    height: 63px;
+}
+.btn{
+    width: 167px;
+    border-radius: 31.5px;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 165px;
+}
+.hero{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44%;
+    height: 95vh;
+    background-image: url(./assets/image-hero-desktop.png);
+    background-position: 18px -180px;
+    background-size: auto 120%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+section{
+    margin-bottom: 140px;
+}
+
+.heading{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 71px;
+    color: #13183F;
+    width: 25%;
+}
+p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #83869A;
+    margin: 29px 0 40px 0 ;
+}
+.intro {
+    margin: 186px 0 226px 165px;
+}
+
+.cards{
+    padding: 24px 165px 0 165px;
+}
+.main_card{
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+    width: 350px;
+    height: 322px;
+    display: flex;
+    justify-content: center;
+    padding: 64px 32px 136px 32px;
+    flex-basis: 33.333333%
+
+}
+.icon{
+    width: 56px;
+    height: 56px;
+    position: relative;
+    top: -24px;
+}
+.card{
+    width: 350px;
+    height: 322px;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 15px;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card > h3{
+    cursor: pointer;
+    padding-bottom: 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #F74780;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 56px;
+}
+footer{
+    background: #13183F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 165px;
+}
+.get_started_3{
+    background: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+border-radius: 28px;
+height: 56px;
+}
+.mobile-hero{
+    display: none;
+}
+
+/* H O V E R S */
+
+.get_started:hover{
+    background: #666CA3;
+}
+.get_started_2:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+.get_started_3:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+/* Responsive */
+
+@media screen and (max-width:768px) {
+    .hero > img{
+        visibility: hidden;
+        display: none;
+    }
+    header{
+        padding: 31px 40px;
+    }
+    footer{
+        padding: 31px 40px;
+    }
+    .hero{
+        background-image: url(./assets/image-hero-tablet.png);
+        background-position: -41px -50px;
+        background-size: auto 85%;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .cards{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 56px;
+    padding: 24px 34px 0 30px;
+    }
+
+    .intro{
+        margin: 106px 0 126px 39px;
+    }
+    .intro h1{
+        font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 50px;
+    }
+    .intro p{
+        font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 26px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    header{
+        padding: 16px 16px;
+    }
+    footer{
+        padding: 16px 16px;
+    }
+    .hero{
+        opacity: 0;
+    }
+    .hero > img{
+        visibility: visible;
+        display: block;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr repeat(5, 1fr); 
+        grid-column-gap: 0px;
+        grid-row-gap: 40px; 
+        padding: 24px 34px 0 0;
+    }
+    .main_card{
+        height: 120px;
+        padding: 25px;
+        width: 90%;
+        font-size: 24px;
+        line-height: 32px;
+        margin-left: 16px;
+    }
+
+    .intro{
+        margin: 38px auto 80px auto ;
+        padding: 0 16px;
+    }
+    .intro h1{
+        width: 100%;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .intro p{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .mobile-hero{
+        display: block;
+        background: url(./assets/image-hero-mobile.png) no-repeat center;
+        height: 50vh;
+        width: 100%;
+        margin: auto;
+    }
+}
